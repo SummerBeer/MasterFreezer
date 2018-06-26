@@ -1,4 +1,5 @@
 ﻿using MasterFreezer.db;
+using MasterFreezer.views;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
@@ -23,20 +24,18 @@ namespace MasterFreezer
     /// </summary>
     public partial class MainWindow : Window
     {
-        private DispatcherTimer ShowTimer;
+        private int time = 6;
+        
         public MainWindow()
         {
+            this.Loaded += Window_Loaded;
             InitializeComponent();
-            // 在此点下面插入创建对象所需的代码。
-            //show timer by_songgp
-            ShowTimer = new System.Windows.Threading.DispatcherTimer();
-            ShowTimer.Tick += new EventHandler(ShowCurTimer);//起个Timer一直获取当前时间
-            ShowTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
-            ShowTimer.Start();
-
-            SqlSugarClient db = new DbContext().db;
+            Console.WriteLine("init..");
+            
+            //SqlSugarClient db = new DbContext().db;
         }
-        //show timer by_songgp
+
+        //show timer 
         public void ShowCurTimer(object sender, EventArgs e)
         {
             //"星期"+DateTime.Now.DayOfWeek.ToString(("d"))
@@ -73,19 +72,6 @@ namespace MasterFreezer
                 this.Visibility = System.Windows.Visibility.Hidden;
             }
         }
-
-        private void btnzancun_Click(object sender, RoutedEventArgs e)
-        {
-            if (true)//里面掉验证函数
-            {
-                // 打开子窗体
-                ZancunWindow aChild = new ZancunWindow();
-                aChild.Show();
-                // 隐藏自己(父窗体)
-                this.Visibility = System.Windows.Visibility.Hidden;
-            }
-        }
-
         private void btnadministor_Click(object sender, RoutedEventArgs e)
         {
             if (true)//里面掉验证函数
@@ -97,6 +83,28 @@ namespace MasterFreezer
                 this.Visibility = System.Windows.Visibility.Hidden;
             }
         }
+
         
+        private void timerHandler(object source, EventArgs e)
+        {
+
+            Console.WriteLine("current Time: " +time); 
+            if (time == 0)
+            {
+                ScreenWindow mw = new ScreenWindow();
+                mw.Show();
+                this.Visibility = System.Windows.Visibility.Hidden;
+            }
+            time--;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 1);
+            //timer.Tick += new EventHandler(timerHandler);
+            timer.Tick += new EventHandler(ShowCurTimer);//起个Timer一直获取当前时间
+            timer.Start();
+        }
     }
 }

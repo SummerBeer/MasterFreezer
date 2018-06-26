@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MasterFreezer"
         mc:Ignorable="d"
-        Title="OpenWindow" Height="600" Width="800" WindowState="Maximized" WindowStyle="None" AllowsTransparency="True">
+        Title="OpenWindow" Height="600" Width="800" WindowState="Maximized" 
+        WindowStyle="None" AllowsTransparency="True" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -19,11 +20,12 @@
                         <GradientStop Color="#FF63DA2A" Offset="1"/>
                     </LinearGradientBrush>
                 </Grid.Background>
-                <TextBlock x:Name="lblSecond" HorizontalAlignment="Right" Margin="689,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" FontSize="48" Foreground="#FFFF1313"><Run Text="10"/></TextBlock>
+                <TextBlock x:Name="lblSecond" HorizontalAlignment="Right" Margin="689,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" FontSize="48" Foreground="#FFFF1313"><Run Text="6"/></TextBlock>
             </Grid>
         </Border>
         <Grid Grid.Row=" 1">
-            <TextBlock HorizontalAlignment="Left" Margin="177,125,0,0" TextWrapping="Wrap" Text="柜子已打开，请及时关闭柜门" VerticalAlignment="Top" Height="149" Width="425" FontSize="30"/>
+            <TextBlock HorizontalAlignment="Left" Margin="204,199,0,0" TextWrapping="Wrap" Text="抽屉已打开，请及时关闭柜门" VerticalAlignment="Top" Height="149" Width="425" FontSize="30"/>
+            <Label Content="Label" HorizontalAlignment="Left" Height="62" Margin="247,52,0,0" VerticalAlignment="Top" Width="341"/>
 
         </Grid>
     </Grid>

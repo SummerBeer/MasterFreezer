@@ -1,0 +1,12 @@
+﻿<Window x:Class="MasterFreezer.views.ScreenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MasterFreezer.views"
+        mc:Ignorable="d"
+        Title="ScreenWindow" Height="600" Width="800" Loaded="Window_Load" WindowStyle="None" WindowState="Maximized">
+    <Grid>
+        <Image x:Name="image" Margin="0" Grid.Column="1" Stretch="Fill" MouseDown="MouseDown_Click"/>
+    </Grid>
+</Window>

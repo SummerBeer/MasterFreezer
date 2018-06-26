@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,7 +20,7 @@ namespace MasterFreezer
     public partial class OpenWindow : Window
     {
         // after 3000ms performance closeHandler
-        private int time = 10;
+        private int time = 6;
 
         public OpenWindow()
         {
@@ -36,6 +37,13 @@ namespace MasterFreezer
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Tick += new EventHandler(timerHandler);
             timer.Start();
+            //语音提示
+            SoundPlayer simpleSound = new SoundPlayer();
+            string rootpath = System.Windows.Forms.Application.StartupPath.Substring(0, System.Windows.Forms.Application.StartupPath.LastIndexOf("\\"));
+            rootpath = rootpath.Substring(0, rootpath.LastIndexOf("\\")) + "\\yuyintishi";
+            simpleSound.SoundLocation = rootpath+ "\\01+Lost+Stars.wav";
+            simpleSound.Load();
+            simpleSound.Play();
         }
 
         private void timerHandler(object source, EventArgs e)

@@ -5,7 +5,13 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterFreezer", "MasterFreezer\MasterFreezer.csproj", "{EFA31982-676C-431C-81F2-00301AD35D7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFKeyboard", "WPFKeyboard\WPFKeyboard.csproj", "{481576F2-5ECA-4DCF-AFE1-8D2FEDE39A11}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterFreezer.Model", "MasterFreezer.Model\MasterFreezer.Model.csproj", "{BFF5CFAF-7E71-485C-A9A2-CE2383AA6636}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterFreezer.Dal", "MasterFreezer.Dal\MasterFreezer.Dal.csproj", "{C954EE40-ED1A-49DE-B662-E9E44DEE93EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterFreezer.Bll", "MasterFreezer.Bll\MasterFreezer.Bll.csproj", "{9129409E-0FA2-4E3E-80CA-74891272A23C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterFreezer.Common", "MasterFreezer.Common\MasterFreezer.Common.csproj", "{17B4F444-53C6-47A2-B32F-70807F69235C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +23,22 @@ Global
 		{EFA31982-676C-431C-81F2-00301AD35D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFA31982-676C-431C-81F2-00301AD35D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFA31982-676C-431C-81F2-00301AD35D7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{481576F2-5ECA-4DCF-AFE1-8D2FEDE39A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{481576F2-5ECA-4DCF-AFE1-8D2FEDE39A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{481576F2-5ECA-4DCF-AFE1-8D2FEDE39A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{481576F2-5ECA-4DCF-AFE1-8D2FEDE39A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF5CFAF-7E71-485C-A9A2-CE2383AA6636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF5CFAF-7E71-485C-A9A2-CE2383AA6636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF5CFAF-7E71-485C-A9A2-CE2383AA6636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF5CFAF-7E71-485C-A9A2-CE2383AA6636}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C954EE40-ED1A-49DE-B662-E9E44DEE93EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C954EE40-ED1A-49DE-B662-E9E44DEE93EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C954EE40-ED1A-49DE-B662-E9E44DEE93EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C954EE40-ED1A-49DE-B662-E9E44DEE93EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9129409E-0FA2-4E3E-80CA-74891272A23C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9129409E-0FA2-4E3E-80CA-74891272A23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9129409E-0FA2-4E3E-80CA-74891272A23C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9129409E-0FA2-4E3E-80CA-74891272A23C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17B4F444-53C6-47A2-B32F-70807F69235C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B4F444-53C6-47A2-B32F-70807F69235C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B4F444-53C6-47A2-B32F-70807F69235C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B4F444-53C6-47A2-B32F-70807F69235C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

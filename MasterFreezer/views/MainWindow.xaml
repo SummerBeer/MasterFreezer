@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MasterFreezer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800" WindowState="Maximized" WindowStyle="None" AllowsTransparency="True">
+        Title="MainWindow" Height="600" Width="800" WindowState="Maximized" 
+        WindowStyle="None" AllowsTransparency="True" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -14,25 +15,25 @@
         </Grid.RowDefinitions>
         <Border>
             <Grid>
-                <Grid x:Name="LayoutRoot" Margin="566,0,0,0">
+                <Grid x:Name="LayoutRoot" Margin="720,0,0,0">
 
                     <TextBlock x:Name="Tt" FontSize="28" Margin="62,49,-46,51" TextWrapping="Wrap" HorizontalAlignment="Center">
                         <TextBlock.Foreground>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="#FFEE580F" Offset="1"/>
+                                <GradientStop Color="#FF868584" Offset="1"/>
                             </LinearGradientBrush>
                         </TextBlock.Foreground>
                     </TextBlock>
                 </Grid>
-                <StackPanel  HorizontalAlignment="Left" Margin="24,15,0,7" Width="315">
-                    <Image Height="33" 
-                   Width="34"/>
+                <StackPanel  HorizontalAlignment="Left" Margin="24,0,0,0" Width="357">
                     <TextBlock Text="欢迎使用智能生鲜柜"
                            FontSize="34"
-                           Margin="20,0,-30,0"
+                           Margin="20,40,0,0"
                            Foreground="Black"
-                           FontFamily="微软雅黑" FontWeight="Bold"/>
+                           FontFamily="微软雅黑" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+                    <Image Height="33" 
+                   Width="34"/>
                 </StackPanel>
             </Grid>
         </Border>
@@ -64,6 +65,7 @@
                         <TextBlock VerticalAlignment="Center" RenderTransformOrigin="0.531,-0.6">寄件</TextBlock>
                     </StackPanel>
                 </Button>
+
             </Grid>
             <Grid Grid.Column="1" >
                 <Button BorderThickness="0" Content="取件" Name="btnqujian" HorizontalAlignment="Center" Height="300" Width="200" FontFamily="微软雅黑" FontSize="34" Click="btnqujian_Click">
@@ -76,7 +78,8 @@
                 </Button>
             </Grid>
             <Grid Grid.Column="2" >
-                <Button BorderThickness="0" Content="暂存" Name="btnzancun" Width="200" Height="300" HorizontalAlignment="Left" FontFamily="微软雅黑" FontSize="34" Click="btnzancun_Click">
+                <Label Content="各个柜子当前温度" FontSize="28" HorizontalAlignment="Left" Height="138" Margin="0,141,0,0" VerticalAlignment="Top" Width="263"/>
+                <!--Button BorderThickness="0" Content="暂存" Name="btnzancun" Width="200" Height="300" HorizontalAlignment="Left" FontFamily="微软雅黑" FontSize="34" Grid.ColumnSpan="2" Margin="0,50" >
                     <Button.Background>
                         <LinearGradientBrush StartPoint="0.4,0"
                                      EndPoint="0.4,1">
@@ -90,7 +93,11 @@
                             </LinearGradientBrush.GradientStops>
                         </LinearGradientBrush>
                     </Button.Background>
-                </Button>
+                </Button-->
+                <TextBlock HorizontalAlignment="Right" Margin="0,0,0,-1" 
+                           TextWrapping="Wrap"  VerticalAlignment="Bottom"
+                           Text=" 终端号为
+                           终端地址为" FontFamily="微软雅黑" FontSize=" 20" Width="190" Grid.Column="1"/>
             </Grid>
         </Grid>
     </Grid>

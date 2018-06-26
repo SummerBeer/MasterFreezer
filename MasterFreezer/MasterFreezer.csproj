@@ -36,11 +36,12 @@
   <ItemGroup>
     <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.11\lib\net452\MySql.Data.dll</HintPath>
-      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SqlSugar, Version=4.6.4.8, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\sqlSugar.4.6.4.8\lib\SqlSugar.dll</HintPath>
@@ -55,6 +56,7 @@
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -73,35 +75,90 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="controls\KeyboardBase.xaml.cs">
+      <DependentUpon>KeyboardBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\postman\StoreState.xaml.cs">
+      <DependentUpon>StoreState.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\postman\CupboardNum.xaml.cs">
+      <DependentUpon>CupboardNum.xaml</DependentUpon>
+    </Compile>
     <Compile Include="db\DbContext.cs" />
-    <Compile Include="models\Postman.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="views\AdministorsettingWindow.xaml.cs">
+    <Compile Include="models\tb_administrator.cs" />
+    <Compile Include="models\tb_baudrate.cs" />
+    <Compile Include="models\tb_cupboard.cs" />
+    <Compile Include="models\tb_cupboardrunninglog.cs" />
+    <Compile Include="models\tb_databyte.cs" />
+    <Compile Include="models\tb_drawer.cs" />
+    <Compile Include="models\tb_drawerlog.cs" />
+    <Compile Include="models\tb_drawerstate.cs" />
+    <Compile Include="models\tb_expresscompany.cs" />
+    <Compile Include="models\tb_freezermode.cs" />
+    <Compile Include="models\tb_ismaingui.cs" />
+    <Compile Include="models\tb_order.cs" />
+    <Compile Include="models\tb_orderstate.cs" />
+    <Compile Include="models\tb_paritybyte.cs" />
+    <Compile Include="models\tb_postman.cs" />
+    <Compile Include="models\tb_postmanstate.cs" />
+    <Compile Include="models\tb_screensaverfile.cs" />
+    <Compile Include="models\tb_serialnumber.cs" />
+    <Compile Include="models\tb_startmode.cs" />
+    <Compile Include="models\tb_state.cs" />
+    <Compile Include="models\tb_stopbyte.cs" />
+    <Compile Include="models\tb_terminal.cs" />
+    <Compile Include="views\admin\AdministorsettingWindow.xaml.cs">
       <DependentUpon>AdministorsettingWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\AdministorWindow.xaml.cs">
+    <Compile Include="views\admin\AdministorWindow.xaml.cs">
       <DependentUpon>AdministorWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\CunfangWindow.xaml.cs">
+    <Compile Include="views\postman\CunfangWindow.xaml.cs">
       <DependentUpon>CunfangWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\admin\IPSetting.xaml.cs">
+      <DependentUpon>IPSetting.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\OpenWindow.xaml.cs">
       <DependentUpon>OpenWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\PostercunfangWindow.xaml.cs">
+    <Compile Include="views\postman\PostercunfangWindow.xaml.cs">
       <DependentUpon>PostercunfangWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\QujianWindow.xaml.cs">
+    <Compile Include="views\user\QujianWindow.xaml.cs">
       <DependentUpon>QujianWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\ZancunWindow.xaml.cs">
-      <DependentUpon>ZancunWindow.xaml</DependentUpon>
+    <Compile Include="views\ScreenWindow.xaml.cs">
+      <DependentUpon>ScreenWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="views\AdministorsettingWindow.xaml">
+    <Compile Include="views\admin\TempSetting.xaml.cs">
+      <DependentUpon>TempSetting.xaml</DependentUpon>
+    </Compile>
+    <Page Include="controls\KeyboardBase.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\AdministorWindow.xaml">
+    <Page Include="resources\ImageDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\postman\StoreState.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\postman\CupboardNum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\admin\AdministorsettingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\admin\AdministorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\admin\IPSetting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -117,7 +174,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="views\CunfangWindow.xaml">
+    <Page Include="views\postman\CunfangWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,15 +182,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\PostercunfangWindow.xaml">
+    <Page Include="views\postman\PostercunfangWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\QujianWindow.xaml">
+    <Page Include="views\user\QujianWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\ZancunWindow.xaml">
+    <Page Include="views\ScreenWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\admin\TempSetting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,8 +226,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Resource Include="作业4 薛惠丹.jpg" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Image\TitleLogo.png" />
+    <Resource Include="resources\Image\TitleLogo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
